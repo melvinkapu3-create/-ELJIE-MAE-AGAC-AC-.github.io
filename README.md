@@ -303,6 +303,7 @@ to me
                 <div class="progress-bar"><div class="progress design"></div></div>
             </div>
         </section>
+        </html>
 
         <!-- Future Goals -->
         <section id="goals">
