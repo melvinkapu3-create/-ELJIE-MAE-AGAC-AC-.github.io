@@ -1,212 +1,108 @@
-# -ELJIE-MAE-AGAC-AC-.github.io
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eljie May Agac-ac | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
-html { scroll-behavior: smooth; }
-body, html { margin:0; padding:0; font-family:'Roboto',sans-serif; background:#f5f5f5; color:#333; }
-a { text-decoration:none; color:inherit; }
+<title>STA.RITA, THOMAS F. Autobiography</title> <style> :root{ --bg1:#fdeefc; --bg2:#f3f0ff; --card:#ffffff; --muted:#f80bc5; --accent:#030303; --accent2:#f7c5e0;} *{box-sizing:border-box} body{margin:0;font-family:'Cursive',sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#2d1b4e} .container{max-width:1000px;margin:28px auto;padding:20px} header{display:flex;align-items:center;justify-content:space-between;gap:16px} .brand{display:flex;align-items:center;gap:12px} .avatar{width:68px;height:68px;border-radius:50%;object-fit:cover;border:3px solid rgba(0,0,0,0.06)} h1{font-size:22px;margin:0;color:#4b1f5f} p.lead{margin:8px 0 0;color:var(--muted)} .btn{display:inline-block;padding:8px 12px;border-radius:12px;background:var(--accent2);border:none;text-decoration:none;color:#4b1f5f;font-weight:500;box-shadow:0 2px 5px rgba(0,0,0,0.05)} .btn:hover{background:#f2bde0}
+.hero{margin-top:26px;background:linear-gradient(90deg,rgba(230,181,255,0.2),rgba(247,197,224,0.2));padding:22px;border-radius:14px;display:flex;gap:18px;align-items:center;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+.hero .text{flex:1}
+.hero h2{margin:0;font-size:28px;color:#4b1f5f}
+.hero p{margin:10px 0 0;color:var(--muted)}
 
-/* Front Page */
-.front-page { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px; background:#f5f5f5; }
-.front-page img.profile-pic { width:180px; height:180px; border-radius:50%; border:3px solid #2c3e50; margin-bottom:20px; object-fit:cover; animation:fadeInDown 1s forwards; }
-.front-page h1 { font-family:'Montserrat',sans-serif; font-size:3em; color:#2c3e50; margin:0; animation:fadeInDown 1s forwards; }
-.front-page p { font-size:1.3em; margin:15px 0 40px; animation:fadeInDown 1s forwards; }
-.front-page a.button { background:#2c3e50; color:white; padding:15px 35px; border-radius:50px; font-size:1.1em; transition:0.3s; }
-.front-page a.button:hover { background:#2980b9; }
-@keyframes fadeInDown { from{opacity:0;transform:translateY(-50px);} to{opacity:1;transform:translateY(0);} }
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
+.card{background:var(--card);padding:16px;border-radius:16px;box-shadow:0 6px 18px rgba(75,31,95,0.05)}
+.section-title{font-weight:600;margin-bottom:10px;color:#4b1f5f}
 
-/* Navigation */
-nav { position:fixed; top:0; width:100%; background:#fff; display:flex; justify-content:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); z-index:1000; }
-nav ul { list-style:none; display:flex; padding:0; margin:0; }
-nav ul li { margin:0 20px; }
-nav ul li a { display:block; padding:15px 10px; color:#2c3e50; font-weight:600; transition:0.3s; }
-nav ul li a.active, nav ul li a:hover { color:#2980b9; }
+.timeline{display:flex;flex-direction:column;gap:12px}
+.titem{display:flex;gap:12px}
+.tyear{width:72px;color:#b78ad9;font-weight:600}
 
-/* Sections */
-.portfolio { display:none; }
-header { text-align:center; padding:100px 20px 50px; opacity:0; transform:translateY(50px); transition:all 1s ease; }
-header.visible { opacity:1; transform:translateY(0);}
-header h1{font-family:'Montserrat',sans-serif; font-size:2.5em; color:#2c3e50;}
-header p{font-size:1.2em; margin-top:10px;}
-.container { max-width:900px; margin:40px auto; padding:0 20px; }
-section { margin-bottom:40px; padding:25px 20px; background:#fff; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.05); opacity:0; transform:translateX(-50px); transition:all 1s ease; }
-section.visible { opacity:1; transform:translateX(0); }
-section h2{ text-align:center; font-family:'Montserrat',sans-serif; color:#2c3e50; margin-bottom:20px; }
-section p{ line-height:1.7; font-size:1.1em; text-align:justify; }
-.highlight{ font-weight:bold; color:#2980b9; }
-.profile-info p{ margin:8px 0; font-size:1.05em; }
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{padding:6px 10px;border-radius:999px;background:#f7e9ff;font-size:13px;color:#4b1f5f}
 
-/* Skills */
-.skill { margin-bottom:20px; }
-.skill p{ font-weight:600; margin-bottom:5px; display:flex; align-items:center; }
-.skill p i{ margin-right:10px; color:#2c3e50; }
-.progress-bar { background:#ecf0f1; border-radius:25px; overflow:hidden; height:25px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); }
-.progress { height:100%; width:0; border-radius:25px; transition: width 2s ease; }
-.progress.html{ background:#2980b9; }
-.progress.js{ background:#3498db; }
-.progress.python{ background:#1abc9c; }
-.progress.design{ background:#9b59b6; }
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.gallery img{width:100%;height:120px;object-fit:cover;border-radius:12px;box-shadow:0 3px 8px rgba(75,31,95,0.05)}
 
-/* Footer */
-footer { text-align:center; padding:25px; background:#fff; color:#2c3e50; font-style:italic; box-shadow:0 -4px 10px rgba(0,0,0,0.05); opacity:0; transform:translateY(50px); transition:all 1s ease; }
-footer.visible{ opacity:1; transform:translateY(0); }
+form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6d7f9;margin-top:8px}
+form button{margin-top:10px;padding:10px 14px;border-radius:10px;border:none;background:var(--accent);color:#4b1f5f;font-weight:600}
 
-/* Back to Top */
-#topBtn { display:none; position:fixed; bottom:30px; right:30px; z-index:100; font-size:18px; border:none; outline:none; background:#2c3e50; color:white; cursor:pointer; padding:15px; border-radius:50px; box-shadow:0 4px 8px rgba(0,0,0,0.2); transition:0.3s;}
-#topBtn:hover{ background:#2980b9; }
+footer{text-align:center;color:var(--muted);margin-top:18px;font-size:13px}
 
-@media(max-width:600px){
-.front-page h1{font-size:2em;}
-section{padding:20px 15px;}
-.front-page img.profile-pic{width:140px;height:140px;}
-nav ul li{margin:0 10px;}
-}
-</style>
-</head>
-<body>
+@media (max-width:880px){.grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.hero{flex-direction:column;align-items:flex-start}}
 
-<!-- Front Page -->
-<div class="front-page" id="front-page">
-    <img src="profile.jpg" alt="Eljie May Agac-ac Profile Picture" class="profile-pic">
-    <h1>Eljie May Agac-ac</h1>
-    <p>An IT student from Lapu-Lapu City College</p>
-    <a href="#" class="button" onclick="showPortfolio()">Click Here to Know More About Me</a>
-</div>
+.lightbox {position: fixed;
+top: 0; left: 0; width: 100%; height: 100%; background: rgba(75, 31, 95, 0.7); display: none; align-items: center; justify-content: center; z-index: 1000; cursor: zoom-out;}
 
-<!-- Portfolio -->
-<div class="portfolio" id="portfolio">
-<nav>
-<ul>
-<li><a href="#about" class="nav-link">About Me</a></li>
-<li><a href="#learning" class="nav-link">Learning Journey</a></li>
-<li><a href="#skills" class="nav-link">Skills</a></li>
-<li><a href="#goals" class="nav-link">Future Goals</a></li>
-<li><a href="#contact" class="nav-link">Contact</a></li>
-</ul>
-</nav>
+.lightbox.active {display: flex;}
 
-<header id="header">
-<h1>Eljie May Agac-ac</h1>
-<p>An IT student from Lapu-Lapu City College</p>
-</header>
+.lightbox img {max-width: 90%; max-height: 80%; border-radius: 12px; box-shadow: 0 8px 20px rgb(0, 0, 0); animation: fadeIn 0.3s ease;}
 
-<div class="container">
-<section id="about">
-<h2>About Me</h2>
-<div class="profile-info">
-<p><strong>Address:</strong> Zone Pansat, Calawisan, Lapu-Lapu City</p>
-<p><strong>Age:</strong> 20 years old</p>
-<p><strong>Phone:</strong> 09939133656</p>
-<p><strong>Email:</strong> agac-ac.eljiemay@llcc.edu.ph</p>
-</div>
+@keyframes fadeIn {from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); }} </style>
+
+<section class="hero">
+  <div class="text">
+    <h3>Hello Everyone, I`m Sta.Rita, Thomas</h3>
+    <p>I'm an IT student from Lapu-Lapu City College.</p>
+     <p>Dreaming to be an IT Professional and to travel around the world.</p>
+      <p style="margin-top:10px;color:var(--muted)"> Computer Technology.</p>
+  </div>
+  <div style="min-width:160px;text-align:center">
+    <img src="12.jpg.jpg" alt="profile" style="width:220px;height:220px;border-radius:16px;object-fit:cover;border:6px solid rgb(3, 3, 3);box-shadow:0 6px 20px rgba(0,0,0,0.06)" />
+  </div>
 </section>
 
-<section id="learning">
-<h2>My HTML Learning Journey</h2>
-<p>At first, I did not have any knowledge about <span class="highlight">HTML</span>. I did not even know what it really was or how it worked. When I first heard about it, I honestly thought it was very difficult and that I would not be able to do it. I felt nervous and unsure if I could understand it.</p>
-<p>However, when I finally had the opportunity to try HTML, I realized that it was not as difficult as I thought. In fact, it was interesting and engaging. I began learning the basic tags and how to create simple web pages. I learned how to add text, images, and links. It was amazing to see my work appear on the screen for the first time.</p>
-<p>As I continued practicing, I began to enjoy HTML more. I felt proud to create something on my own. HTML taught me that coding is not only about typing—it is about being <span class="highlight">creative and patient</span>.</p>
-<p>Now, I can confidently say that learning HTML has been a <span class="highlight">valuable experience</span>. It has taught me to never fear trying new things. Even if a task seems difficult at first, patience and dedication can make it enjoyable and rewarding.</p>
-</section>
+<div class="grid">
+  <main>
+    <section class="card">
+      <div class="section-title">What I`ve learned about HTML</div>
+    <p>With the help of HTML tutorials, I got a basic understanding of web development. Now I am familiar with the structuring of web pages by HTML with the aid of appropriate units such as headings, paragraphs, lists, links, and images. It was taught me to employ very basic tags such as html, head, body, h1 to h6, p, a, and img which are mandatory for the creation of content and designs of the web.</p> 
+    <p>Moreover, I have studied the methods of forming tables, lists, and forms. To be sure, forms are the most functional ones for getting the user's ideas and opinions through some fields such as text boxes, checkboxes, and buttons. Tables gave me an opportunity to have data in the form of rows and columns and at the same time I resorted to ordered and unordered lists to present data in a nice way. Besides that, the knowledge of the proper nesting of elements and the use of attributes like href, src, alt, and type was also the highlight of my learning.</p>
+   <p>I was introduced to semantic HTML which is another vital concept I got from my studies. These are the elements such as header, footer, section, and article, that not only serves as the framework but also tells the story of the whole structure. The usage of semantic tags signifies a site's making process easier not only for developers but also for search engines and screen readers thus accessibility and SEO being the main beneficiaries.</p>
+    <p>Besides that, I learned the interdependency between HTML, CSS, and JavaScript. HTML gives the skeletal structure, while CSS is responsible for the design and layout, and JavaScript is the one that makes the site interactive. Getting familiar with this network made me think of the whole web development process, and as a result, I am even more eager now to work with CSS and JavaScript further.</p>
+    <p>One of the cool features I learned about was how to bring media such as pictures, sounds, and videos into a web page. By the use of img, audio, and video tags, I can spice up web pages and make them interactive. Along with that, I was introduced to the method of using certain features such as controls, autoplay, and loop on the site for media management.</p>
+    <p>I have also started to grasp the linking concept between various web pages. By utilizing relative and absolute URLs, I am able to link to pages that are either on the same website or on different ones. Furthermore, I learned about anchor links that enable people to be taken directly to the parts of the page they want to see thereby making the activity of visiting the site much simpler and convenient for the users.</p>
+    <p>By and large, my study of HTML has been instrumental in my achievement of the skill required to make simple web pages from the very beginning. I now have the knowledge of how the building of websites is done from scratch and the right way of formatting and presenting content in the virtual space. This is merely the first massive step on the road of becoming a full-stack web developer or the creator of personal projects like portfolios or blogs.</p>
+  </section>
 
-<section id="skills">
-<h2>My Skills</h2>
-<p>As an IT student, I have been developing the following skills:</p>
 
-<div class="skill">
-<p><i class="fa-brands fa-html5"></i> HTML & CSS</p>
-<div class="progress-bar"><div class="progress html"></div></div>
+    
+
+  </main>
+
+  <aside>
+    <div class="card">
+      <div class="section-title">Quick Info</div>
+      <p style="margin:6px 0;color:var(--muted)"><strong>Location:</strong> Sudtonggan Dubai, Basak, Lapu-Lapu City, Philippines.</p>
+      <p style="margin:6px 0;color:var(--muted)"><strong>School:</strong> Lapu-Lapu City College</p>
+      <p style="margin:6px 0;color:var(--muted)"><strong>Age:</strong> 23</p>
+      <p style="margin:6px 0;color:var(--muted)"><strong>Father`s Name:</strong> Angelito L. Olivar</p>
+      <p style="margin:6px 0;color:var(--muted)"><strong>Mother`s Name:</strong> Analiza F. Sta.Rita</p>
+
+      <div style="margin-top:12px">
+        <div class="section-title">Skills</div>
+        <div class="skills" style="margin-top:8px">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">Design</div>
+          <div class="skill">Entrepreneurship</div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="section-title">Awards</div>
+        <p style="color:var(--muted);font-size:14px"> Most understanding person, Champion Mobile Legend, and Most handsome.</p>
+      </div>
+Socials
+Facebook Instagram
+
+    <div class="card" style="margin-top:12px">
+      <div class="section-title">Contact</div>
+      <form action="#">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Your email" required />
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
 </div>
 
-<div class="skill">
-<p><i class="fa-brands fa-js-square"></i> JavaScript</p>
-<div class="progress-bar"><div class="progress js"></div></div>
-</div>
-
-<div class="skill">
-<p><i class="fa-brands fa-python"></i> Python</p>
-<div class="progress-bar"><div class="progress python"></div></div>
-</div>
-
-<div class="skill">
-<p><i class="fa-solid fa-palette"></i> Web Design</p>
-<div class="progress-bar"><div class="progress design"></div></div>
-</div>
-</section>
-
-<section id="goals">
-<h2>Future Goals</h2>
-<p>As a future web developer, I aim to create meaningful and user-friendly websites. I want to continue improving my coding skills and learning new technologies to become a professional in the IT field. Dedication, creativity, and continuous learning are the keys to success.</p>
-</section>
-
-<section id="contact">
-<h2>Contact Me</h2>
-<p><strong>Address:</strong> Zone Pansat, Calawisan, Lapu-Lapu City</p>
-<p><strong>Phone:</strong> 09939133656</p>
-<p><strong>Email:</strong> agac-ac.eljiemay@llcc.edu.ph</p>
-</section>
-
-</div>
-
-<footer id="footer">© 2025 Eljie May Agac-ac | Portfolio</footer>
-</div>
-
-<button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
-
-<script>
-function showPortfolio(){
-document.getElementById('front-page').style.display='none';
-document.getElementById('portfolio').style.display='block';
-revealSections(); animateSkills();
-}
-
-let topBtn=document.getElementById("topBtn");
-window.onscroll=function(){scrollFunction(); highlightMenu(); revealSections(); animateSkills();};
-
-function scrollFunction(){
-if(document.body.scrollTop>300||document.documentElement.scrollTop>300){topBtn.style.display="block";}else{topBtn.style.display="none";}
-}
-function topFunction(){document.body.scrollTop=0; document.documentElement.scrollTop=0;}
-
-const sections=document.querySelectorAll('section');
-const navLinks=document.querySelectorAll('.nav-link');
-function highlightMenu(){
-let scrollPos=window.scrollY+150;
-sections.forEach(section=>{
-if(scrollPos>=section.offsetTop && scrollPos<section.offsetTop+section.offsetHeight){
-navLinks.forEach(link=>{link.classList.remove('active');if(link.getAttribute('href').substring(1)===section.getAttribute('id')){link.classList.add('active');}});
-}
-});
-}
-
-const header=document.getElementById('header');
-const footer=document.getElementById('footer');
-function revealSections(){
-sections.forEach(section=>{if(section.getBoundingClientRect().top<window.innerHeight-100){section.classList.add('visible');}});
-if(header.getBoundingClientRect().top<window.innerHeight){header.classList.add('visible');}
-if(footer.getBoundingClientRect().top<window.innerHeight){footer.classList.add('visible');}
-}
-
-function animateSkills(){
-let skillsSection=document.getElementById('skills');
-if(skillsSection.getBoundingClientRect().top<window.innerHeight-100){
-document.querySelector('.progress.html').style.width='90%';
-document.querySelector('.progress.js').style.width='70%';
-document.querySelector('.progress.python').style.width='60%';
-document.querySelector('.progress.design').style.width='80%';
-}
-}
-window.addEventListener('load', revealSections);
-</script>
-</body>
-</html>
-
-You, 50 min
-
-
+<footer>
+  GOD BLESS!!
+  </footer>
+expanded <script> const lightbox = document.getElementById('lightbox'); const lightboxImg = lightbox.querySelector('img'); document.querySelectorAll('.gallery img').forEach(img => { img.addEventListener('click', () => { lightbox.classList.add('active'); lightboxImg.src = img.src;});}); lightbox.addEventListener('click', () => { lightbox.classList.remove('active');}); </script>
